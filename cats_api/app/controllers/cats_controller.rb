@@ -13,6 +13,11 @@ class CatsController < ApplicationController
     end
 
     def create
+        # @cat = Cat.create(
+        #     name: params[:name],
+        #     color: params[:color],
+        #     user_id: @user_id
+        # )
         @cat = Cat.create(cat_params)
         render json: @cat
     end
